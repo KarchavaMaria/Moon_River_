@@ -7,7 +7,7 @@ Built with **HTML, CSS, SCSS, and vanilla JavaScript**. Fully responsive and opt
 
 ## 🔗 Live Demo
 Check out the live site here:  
-[https://KovalyovaMaria.github.io/Moon_River/](https://KovalyovaMaria.github.io/Moon_River/)
+[[https://KovalyovaMaria.github.io/Moon_River/](https://KovalyovaMaria.github.io/Moon_River/)](https://kovalyovamaria.github.io/Moon-River-/)
 
 ---
 
