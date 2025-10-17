@@ -1,13 +1,13 @@
 # Moon River 🌊
 
 A stylish **one-page jewelry website** showcasing collections with an interactive gallery.  
-Built with **HTML, CSS, SCSS, and vanilla JavaScript**. Fully responsive and optimized for desktop and mobile devices.
+Built with **HTML, CSS, and vanilla JavaScript**. Fully responsive and optimized for desktop and mobile devices.
 
 ---
 
 ## 🔗 Live Demo
 Check out the live site here:  
-[[https://KovalyovaMaria.github.io/Moon_River/](https://KovalyovaMaria.github.io/Moon_River/)](https://kovalyovamaria.github.io/Moon-River-/)
+(https://kovalyovamaria.github.io/Moon-River-/)
 
 ---
 
