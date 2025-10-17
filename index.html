@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="theme-color" content="#000000"/>
+	<meta name="description" content="Web site created using create-react-app"/>
+	<meta charset="UTF-8">
+	<link rel="icon" href="assets/favicon.png">
+	<link rel="stylesheet" href="style.css">
+	<title>Moon River</title>
+</head>
+<body>
+<div class="wrapper">
+	<header>
+		<div class="logo">
+			<img src="./assets/icons/icons_logo.svg" alt="MOON RIVER">
+		</div>
+		<div class="menu-tel">
+			<button id="menu-tel-btn">
+				<img src="assets/icons/icons_menu.png" alt="меню">
+			</button>
+		</div>
+		<nav class="navBar">
+			<img src="assets/icons/icons_beautiful.svg" alt="beautiful"/>
+			<img src="assets/icons/icons_user.svg" alt="user"/>
+			<img src="assets/icons/icons_cart.svg" alt="cart"/>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="left">
+			<h1 id="logo">HIGH JEWELRY</h1>
+			<div class="list-collection">
+				<button></button>
+				<p>
+					<a href="#collection" data-i18n="collection-view" class="collection-view">Смотреть коллекцию</a>
+				</p>
+			</div>
+			<div class="language-btn">
+				<button id="btn-ru" onclick="setLanguage('ru')" style="color: #272727">RU</button>
+				<p>/</p>
+				<button id="btn-ua" onclick="setLanguage('ua')" style="color: #EFC58B">UA</button>
+				<p>/</p>
+				<button id="btn-en" onclick="setLanguage('en')" style="color: #C4C4C4">EN</button>
+			</div>
+
+		</div>
+		<div class="right">
+			<img src="./assets/img/img_ring_cartier.png" alt="Cartier ring" class="ring">
+			<div class="title-ring">
+				<p class="right-trinity" data-i18n="right-trinity">КОЛЬЦО TRINITY, CARTIER
+				<p class="decoration-white" data-i18n="decoration-white"><br>Белое золото, бриллианты</p>
+				<br><span>$3000</span></p>
+			</div>
+
+		</div>
+	</div>
+	<main>
+		<section class="selection-by-gender">
+			<div class="gender" style="background-image: url(./assets/img/img_form_men.png)">
+				<div class="title-gender">
+					<p data-i18n="go-to-section">Перейти в раздел</p>
+					<h2 data-i18n="men">Для мужчин</h2>
+					<button></button>
+				</div>
+			</div>
+			<div class="gender" style="background-image: url(./assets/img/img_form_women.png)">
+				<div class="title-gender">
+					<p data-i18n="go-to-section">Перейти в раздел</p>
+					<h2 data-i18n="women">Для женщин</h2>
+					<button></button>
+				</div>
+			</div>
+		</section>
+		<section class="map-section">
+			<div class="map-section-left">
+				<div class="map-title">
+					<h2 data-i18n="find-a-boutique">Найди<br>бутик около себя</h2>
+					<p data-i18n="address">
+						Введите свой адрес и узнайте о самых ближайших <br/> бутиках к вам
+					</p>
+					<form class="map-form">
+						<input type="text" data-i18n-placeholder="input-form-address" placeholder="Введите адрес"
+							   class="map-input">
+						<button type="submit" class="map-button"
+								onclick="window.open('https://www.google.com/maps/@50.0105216,36.2610688,10316m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
+							<img class="arrow" src="./assets/icons/icons_arrow_next.png" alt="-->">
+						</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="map-section-right">
+				<div id="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22310.63350742936!2d36.224692702966486!3d49.99158072228721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a0f1b04aa383%3A0x95193f4aa08177cb!2z0J3RltC60L7Qu9GM0YHRjNC60LjQuQ!5e1!3m2!1suk!2sua!4v1756916602093!5m2!1suk!2sua"
+							width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		</section>
+		<section class="jewelry-section">
+			<div class="jewelry-grid" id="collection">
+				<div class="jewelry-card" id="div1">
+					<img src="./assets/img/img_ring_jow's.png" alt="Кольцо Jow’s, Cartier">
+					<div class="jewelry-title" style="padding: 60px 0 0 0">
+						<h3 data-i18n="jows-ring">КОЛЬЦО JOW’S, <span>Cartier</span></h3>
+						<p data-i18n="decoration-white">Белое золото, бриллианты</p>
+						<span class="price">$4600</span>
+					</div>
+				</div>
+
+				<div class="model-card" id="div2">
+					<img src="./assets/img/img_necklace_etoile.png" alt="Модель с ожерельем">
+					<div class="model-title">
+						<h3 data-i18n="etoile-necklace" style="color: rgba(255, 255, 255, 1) ">КОЛЬЕ ETOILE, <span>Hublot</span>
+						</h3>
+						<p data-i18n="decoration-white" style="color: rgba(231, 231, 231, 1) ">Белое золото,
+							бриллианты</p>
+						<span class="price">$4000</span>
+					</div>
+				</div>
+
+				<div class="jewelry-card" id="div3" style="padding: 60px 0 0 0">
+					<img src="./assets/img/img_ring_croix.png" alt="Кольцо Croix, Cartier">
+					<div class="jewelry-title">
+						<h3 data-i18n="ring-croix">КОЛЬЦО CROIX, <span>Cartier</span></h3>
+						<p data-i18n="gold">Желтое, белое, розовое золото</p>
+						<span class="price">$3600</span>
+					</div>
+				</div>
+
+				<div class="jewelry-card" id="div4">
+					<img src="./assets/img/img_earrings_moon.png" alt="Серьги Moon, Hublot">
+					<div class="jewelry-title">
+						<h3 data-i18n="moon-earrings">СЕРЬГИ MOON, <span>Hublot</span></h3>
+						<p data-i18n="sapphire">Желтое золото, сапфир</p>
+						<span class="price">$2900</span>
+					</div>
+				</div>
+
+				<div class="jewelry-card" id="div5">
+					<img src="./assets/img/img_earrings_win.png" alt="Серьги WIN, Blancpain">
+					<div class="jewelry-title">
+						<h3 data-i18n="win-earrings">СЕРЬГИ WIN, <span>Blancpain</span></h3>
+						<p data-i18n="pearl">Желтое золото, жемчуг</p>
+						<span class="price">$3000</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="social-media-section">
+			<div class="title-social-media">
+				<h3 data-i18n="title-social-media">Мы <br/> в социальных сетях</h3>
+			</div>
+			<div class="social-media-left">
+			</div>
+			<div class="social-media-right">
+				<div class="btn-social-media">
+					<a href="https://www.facebook.com/?locale=uk_UA"><img src="./assets/icons/icons_facebook.png"
+																		  alt="facebook"></a>
+					<a href="https://www.instagram.com/"><img src="./assets/icons/icons_instagram.png" alt="instagram"></a>
+				</div>
+				<div class="btn-prev-next">
+					<button id="prev"><img src="./assets/icons/icons_arrow_prev.png" alt="<-"></button>
+					<button id="next"><img src="./assets/icons/icons_arrow_next.png" alt="->"></button>
+				</div>
+			</div>
+		</section>
+		<section class="subscription-section">
+			<div class="subscription-section-left">
+				<img src="./assets/img/img_subscription.jpg" alt="подписка">
+			</div>
+			<div class="subscription-section-right">
+				<div class="contacts">
+					<p data-i18n="tel">ТЕЛЕФОН ФЛАГМАНСКОГО МАГАЗИНА</p>
+					<span>+7 800 456 456</span>
+				</div>
+				<div class="subscription">
+					<p data-i18n="subscribe">ПОДПИШИТЕСЬ НА НОВОСТИ</p>
+					<form class="subscription-form">
+						<input data-i18n-placeholder="input-form-email" type="text" placeholder="Введите E-mail">
+						<button type="submit" class="subscription-button">
+							<img class="arrow" src="./assets/icons/icons_arrow_black.png" alt="-->">
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<section class="footer-section-one">
+			<div class="footer-container">
+				<p data-i18n="job">РАБОТА В КОМПАНИИ</p>
+				<p data-i18n="conditions">УСЛОВИЯ ПОЛЬЗОВАНИЯ</p>
+				<p data-i18n="data">ВЫХОДНЫЕ ДАННЫЕ</p>
+				<p data-i18n="policy">ПОЛИТИКА КОНДИФИЦИАЛЬНОСТИ</p>
+				<p data-i18n="map">КАРТА САЙТА</p>
+			</div>
+		</section>
+		<section class="footer-section-two">
+			<div class="logo">
+				<a href="#logo">
+					<img src="./assets/icons/icons_logo_white.svg" alt="MOON RIVER">
+				</a>
+			</div>
+			<div class="contacts">
+				<p data-i18n="tel">ТЕЛЕФОН ФЛАГМАНСКОГО МАГАЗИНА</p>
+				<span>+7 800 456 456</span>
+				<div class="btn-social-media">
+					<a href="https://www.facebook.com/?locale=uk_UA"><img src="./assets/icons/icons_facebook.png"
+																		  alt="facebook"></a>
+					<a href="https://www.instagram.com/"><img src="./assets/icons/icons_instagram.png" alt="instagram"></a>
+				</div>
+			</div>
+			<div class="subscription">
+				<p data-i18n="subscribe">ПОДПИШИТЕСЬ НА НОВОСТИ</p>
+				<form class="subscription-form">
+					<input data-i18n-placeholder="input-form-email" type="text" placeholder="Введите E-mail">
+					<button type="submit" class="subscription-button">
+						<img class="arrow" src="./assets/icons/icons_arrow_next.png" alt="-->">
+					</button>
+				</form>
+				<div class="aap-store">
+					<a href="https://www.apple.com/app-store/"><img src="./assets/icons/icons_app_store.png"
+																	alt="App Store"></a>
+					<a href="https://play.google.com/store/games?hl=uk&pli=1"><img
+							src="./assets/icons/icons_google_play.png" alt="Google Play"></a>
+				</div>
+			</div>
+		</section>
+	</footer>
+</div>
+
+</body>
+
+<script type="module" src="script.js"></script>

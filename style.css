@@ -1,0 +1,948 @@
+@font-face {
+    font-family: 'Forum';
+    src: url('./assets/font-family/Forum/Forum-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 9999;
+    color: rgba(39, 39, 39, 1);
+}
+
+.closeBtn {
+    position: relative;
+    bottom: 25px;
+    left: 25px;
+    background: none;
+    border: none;
+    color: rgba(39, 39, 39, 1);
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 40px 0;
+    z-index: 10;
+}
+
+.wrapper header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper header .logo img {
+    width: 350px;
+    height: 70px;
+}
+
+.wrapper header .menu-tel {
+    position: absolute;
+    right: 10%;
+    opacity: 0;
+}
+
+.wrapper header .menu-tel button {
+    background: transparent;
+    border: none;
+}
+
+.wrapper header .navBar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.wrapper header .navBar img {
+    width: 30px;
+    height: 30px;
+    color: black;
+    padding: 30px;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.container .left {
+    flex: 1.8;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.container .left h1 {
+    font-weight: lighter;
+    font-family: 'Forum', serif;
+    font-size: 550%;
+    color: #272727;
+    text-shadow: 2px 2px 3px #272727;
+}
+
+.container .left .language-btn {
+    display: flex;
+    align-self: flex-start;
+    margin: 50px;
+}
+
+.container .left .language-btn p {
+    text-shadow: 1px 1px 1px #272727;
+}
+
+.container .left .language-btn button {
+    background: transparent;
+    border: none;
+    font-weight: 400;
+    font-size: 21px;
+    text-shadow: 1px 1px 1px #272727;
+}
+
+.container .left .language-btn button:focus {
+    transform: scale(1.3);
+}
+
+.scaleLang {
+    transform: scale(1.3);
+}
+
+.container .left .list-collection {
+    display: flex;
+    align-items: center;
+}
+
+.container .left .list-collection .collection-view {
+    text-decoration: none;
+    font-style: italic;
+    font-family: "Helvetica Neue", serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: rgba(39, 39, 39, 1);
+    margin: 20px;
+}
+
+.container .left .list-collection button {
+    background: transparent;
+    margin: 20px;
+    width: 130px;
+    border: none;
+    border-bottom: 1px solid rgba(39, 39, 39, 1);
+}
+
+.container .right {
+    flex: 1.2;
+    background: #272727;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.container .right .ring {
+    position: absolute;
+    left: -110px;
+    width: 350px;
+    transition: transform 3s linear;
+}
+
+.container .right .ring:hover {
+    transform: translateX(50px) rotate(360deg) scale(1.2);
+}
+
+.container .right .title-ring {
+    position: absolute;
+    bottom: 10px;
+    right: 130px;
+}
+
+.container .right .title-ring .right-trinity {
+    font-family: "Helvetica Neue", serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.container .right .title-ring .decoration-white {
+    font-family: "Helvetica Neue", serif;
+    font-weight: 300;
+    font-size: 23px;
+    color: #C2C2C2;
+}
+
+.container .right .title-ring span {
+    font-family: "Helvetica Neue", serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: #EFC58B;
+}
+
+main .selection-by-gender {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+main .selection-by-gender .gender {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 49%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .selection-by-gender .gender::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #27272766;
+    z-index: 1;
+}
+
+main .selection-by-gender .gender > * {
+    position: relative;
+    z-index: 2;
+}
+
+main .selection-by-gender .title-gender {
+    font-family: "Helvetica Neue", serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.4s linear;
+}
+
+main .selection-by-gender .title-gender:hover {
+    transform: translateX(10px);
+}
+
+main .selection-by-gender .title-gender p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 31px;
+    margin: 0;
+}
+
+main .selection-by-gender .title-gender h2 {
+    font-weight: 400;
+    font-size: 64px;
+    margin: 0;
+}
+
+main .selection-by-gender .title-gender button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin: 20px;
+    width: 130px;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+main .map-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    background: rgba(39, 39, 39, 1);
+}
+
+main .map-section .map-section-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex: 1;
+}
+
+main .map-section .map-section-left .map-title {
+    margin: 10px;
+}
+
+main .map-section .map-section-left h2 {
+    font-weight: 400;
+    font-size: 48px;
+    color: rgba(255, 255, 255, 1);
+}
+
+main .map-section .map-section-left p {
+    font-weight: 300;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+}
+
+main .map-section .map-section-left .map-form input {
+    width: 380px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+main .map-section .map-section-left .map-form input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 18px;
+}
+
+main .map-section .map-section-left button {
+    background: transparent;
+    height: 20px;
+    border: none;
+    outline: none;
+    position: relative;
+    right: 10%;
+    top: 23px;
+    transition: 1s linear;
+    transform: translateX(10px);
+}
+
+main .map-section .map-section-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 70vh;
+}
+
+main .map-section .map-section-right #map {
+    width: 100%;
+    height: 100%;
+}
+
+main .jewelry-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+main .jewelry-section .jewelry-grid {
+    display: grid;
+    grid-template-columns:  minmax(0, 400px) minmax(0, 600px) minmax(0, 400px);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1400px;
+    grid-template-areas:
+    "col1 col2 col4"
+    "col3 col2 col5"
+}
+
+main .jewelry-section .jewelry-grid > :nth-child(1) {
+    grid-area: col1;
+}
+
+main .jewelry-section .jewelry-grid > :nth-child(2) {
+    grid-area: col2;
+}
+
+main .jewelry-section .jewelry-grid > :nth-child(3) {
+    grid-area: col3;
+}
+
+main .jewelry-section .jewelry-grid > :nth-child(4) {
+    grid-area: col4;
+}
+
+main .jewelry-section .jewelry-grid > :nth-child(5) {
+    grid-area: col5;
+}
+
+main .jewelry-section .jewelry-grid .jewelry-card, .jewelry-section .jewelry-grid .model-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+main .jewelry-section .jewelry-grid .jewelry-card img {
+    width: 60%;
+    height: auto;
+}
+
+main.jewelry-section .jewelry-grid .jewelry-card:hover, main .jewelry-section .jewelry-grid .model-card:hover {
+    transform: scale(1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+main .jewelry-section .jewelry-grid .model-card img {
+    height: 100%;
+    width: 100%;
+}
+
+main .jewelry-section .jewelry-grid .model-card {
+    position: relative;
+    padding: 0;
+}
+
+main .jewelry-section .jewelry-grid .model-card .model-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+main .jewelry-section .jewelry-grid .jewelry-card .jewelry-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 10px 0;
+}
+
+main .jewelry-section .jewelry-grid .jewelry-card .jewelry-title h3, main .jewelry-section .jewelry-grid .model-card .model-title h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+main .jewelry-section .jewelry-grid .jewelry-card .jewelry-title p, main .jewelry-section .jewelry-grid .model-card .model-title p {
+    color: rgba(117, 117, 117, 1);
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+main .jewelry-section .jewelry-grid .jewelry-card .jewelry-title .price, main .jewelry-section .jewelry-grid .model-card .model-title .price {
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(226, 182, 122, 1);
+    margin: 10px 0;
+}
+
+main .social-media-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(39, 39, 39, 1);
+}
+
+main .social-media-section .title-social-media {
+    margin: 20px 200px;
+}
+
+main .social-media-section h3 {
+    font-family: "Helvetica Neue", serif;
+    color: rgba(255, 255, 255, 1);
+    font-size: 28px;
+    font-weight: 400;
+}
+
+main .social-media-section .social-media-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+main .social-media-section .social-media-left img {
+    width: 30%;
+    height: 300px;
+}
+
+main .social-media-section .social-media-right {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .social-media-section .social-media-right .btn-social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+main .social-media-section .social-media-right .btn-social-media a {
+    margin: 20px;
+}
+
+main .social-media-section .social-media-right .btn-prev-next button {
+    background: transparent;
+    border: none;
+}
+
+.btnPrevSlide {
+    transform: translateX(-10px) scale(1);
+    transition: transform 1s linear;
+}
+
+.btnNextSlide {
+    transform: translateX(10px) scale(1);
+    transition: transform 1s linear;
+}
+
+.photoSocialMedia {
+    animation: slide 0.6s linear;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(10%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+main .subscription-section {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+main .subscription-section .subscription-section-left {
+    display: flex;
+    flex: 1;
+    height: 70vh;
+}
+
+main .subscription-section .subscription-section-left img {
+    width: 100%;
+}
+
+main .subscription-section .subscription-section-right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .subscription-section .subscription-section-right .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+main .subscription-section .subscription-section-right .contacts span {
+    color: rgba(149, 149, 149, 1);
+}
+
+main .subscription-section .subscription-section-right .subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+main .subscription-section .subscription-section-right .subscription .subscription-form input {
+    width: 330px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(39, 39, 39, 1);
+    color: rgba(39, 39, 39, 1);
+}
+
+main .subscription-section .subscription-section-right .subscription .subscription-form {
+    width: 300px;
+}
+
+main .subscription-section .subscription-section-right .subscription .subscription-form input::placeholder {
+    color: rgba(149, 149, 149, 1);
+    font-size: 18px;
+}
+
+main .subscription-section .subscription-section-right .subscription .subscription-form button {
+    background: transparent;
+    height: 20px;
+    border: none;
+    outline: none;
+    position: relative;
+    left: 280px;
+    bottom: 70px;
+}
+
+footer {
+    background: rgba(39, 39, 39, 1);
+}
+
+footer .footer-section-one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .footer-section-one .footer-container {
+    font-size: 14px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    margin: 60px;
+}
+
+footer .footer-section-two {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+footer .footer-section-two .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+}
+
+footer .footer-section-two .contacts p {
+    margin: 20px;
+}
+
+footer .footer-section-two .contacts span {
+    color: rgba(194, 194, 194, 1);
+    margin: 20px;
+}
+
+footer .footer-section-two .contacts .btn-social-media {
+    margin: 10px;
+}
+
+footer .footer-section-two .contacts .btn-social-media a {
+    margin: 10px;
+}
+
+footer .footer-section-two .subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+}
+
+footer .footer-section-two .subscription .subscription-form input {
+    width: 150px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(194, 194, 194, 1);
+    color: white;
+}
+
+footer .footer-section-two .subscription .subscription-form input::placeholder {
+    color: rgba(149, 149, 149, 1);
+    font-size: 13px;
+}
+
+footer .footer-section-two .subscription .subscription-form {
+    width: 200px;
+}
+
+footer .footer-section-two .subscription .subscription-form button {
+    background: transparent;
+    height: 20px;
+    border: none;
+    outline: none;
+    position: relative;
+    left: 130px;
+    bottom: 50px;
+}
+
+footer .footer-section-two .subscription .aap-store {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 0 20px 0;
+}
+
+#siteMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(149, 149, 149, 1);
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+#siteMenu .menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+#siteMenu .menu-content a {
+    text-align: start;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    padding: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#siteMenu .menu-content a:hover {
+    font-size: 30px;
+}
+
+#siteMenu .menu-content button {
+    align-self: end;
+    margin: 0 20px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 2px 2px 4px #000;
+}
+
+
+@media (max-width: 1210px) {
+    .container .right .ring {
+        left: -50px;
+        width: 250px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .container .right .ring {
+        left: -20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .container .right .title-ring {
+        right: 5px;
+    }
+}
+
+@media (max-width: 1000px) {
+    main .map-section .map-section-left .map-form input {
+        width: 270px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    main .jewelry-section .jewelry-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "col2 col2"
+            "col2 col2"
+            "col1 col3"
+            "col4 col5";
+    }
+}
+
+@media (max-width: 850px) {
+    .wrapper header {
+        padding: 0;
+        border-bottom: 1px solid rgba(39, 39, 39, 0.4);
+    }
+
+    .wrapper header .logo img {
+        width: 50%;
+        height: 100px;
+        margin: 0 10px;
+    }
+
+    .wrapper header .navBar {
+        display: none;
+    }
+
+    .wrapper header .menu-tel {
+        opacity: 1;
+    }
+
+    .container {
+        flex-direction: column;
+        height: 140vh;
+    }
+
+    .container .left {
+        margin: 60px;
+        flex: 1;
+    }
+
+    .container .right .ring {
+        position: relative;
+        bottom: 50%;
+    }
+
+    .container .right {
+        flex: 1;
+    }
+
+    .container .right .title-ring {
+        flex: 1;
+    }
+
+    main .selection-by-gender {
+        flex-direction: column;
+    }
+
+    main .selection-by-gender .gender {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 750px) {
+    main .map-section {
+        align-items: normal;
+        flex-direction: column;
+        display: block;
+    }
+
+    main .map-section .map-section-left {
+        padding: 40px;
+    }
+
+    main .map-section .map-section-left .map-form input {
+        width: 230px;
+    }
+
+    main .subscription-section {
+        flex-direction: column;
+    }
+
+    main .social-media-section .title-social-media {
+        margin: 10px 0 0 30px;
+        text-shadow: 2px 2px 3px black;
+    }
+
+    main .social-media-section .social-media-left img {
+        height: 250px;
+    }
+
+    footer .footer-section-one .footer-container {
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    footer .footer-section-two {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-section-two .contacts {
+        align-items: flex-start;
+        margin: 15px 0 20px 68px;
+    }
+
+    footer .footer-section-two .subscription .subscription-form input {
+        width: 250px;
+    }
+
+    footer .footer-section-two .subscription .subscription-form button {
+        left: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    main .jewelry-section .jewelry-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "col2"
+            "col1"
+            "col3"
+            "col4"
+            "col5";
+    }
+}
+
+@media (max-width: 550px) {
+    main .selection-by-gender .title-gender h2 {
+        font-size: 40px;
+    }
+
+    main .map-section .map-section-left h2 {
+        font-size: 30px;
+    }
+
+    main .selection-by-gender .title-gender p{
+            font-size: 24px;
+    }
+
+    main .subscription-section .subscription-section-right .subscription .subscription-form input {
+        width: 250px;
+    }
+
+    main .subscription-section .subscription-section-right .subscription .subscription-form button {
+        left: 200px;
+    }
+
+    main .social-media-section .social-media-left {
+        flex-direction: column;
+    }
+    main .social-media-section .social-media-left img {
+        width: 80%;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 420px) {
+    main .map-section .map-section-left .map-form input {
+        width: 200px;
+    }
+
+    main .map-section .map-section-left button {
+        right: 0;
+        left: 50%;
+        top: -50px;
+    }
+}
+
+@media (max-width: 350px) {
+    .container .left h1 {
+        font-size: 440%;
+    }
+}
+
+
+
