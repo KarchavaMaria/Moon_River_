@@ -18,6 +18,7 @@ Check out the live site here:
 - Fully responsive design for mobile and desktop
 - Easy navigation on one page
 - Lightweight and fast-loading
+- Developed in 3 languages: RU, UA, EN
 
 ---
 
