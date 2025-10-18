@@ -43,9 +43,10 @@ Check out the live site here:
   
   <img width="1440" height="769" alt="Снимок экрана 2025-10-17 в 19 14 36" src="https://github.com/user-attachments/assets/886ee97a-18d3-45c4-9539-3b6f6b074a31" />
 
-<img width="814" height="661" alt="Снимок экрана 2025-10-17 в 19 15 00" src="https://github.com/user-attachments/assets/f0017fa4-6f4a-45ce-b147-2665febd3414" />
+<img width="809" height="757" alt="Снимок экрана 2025-10-18 в 18 26 59" src="https://github.com/user-attachments/assets/d89ef684-4491-4945-ba9b-e4bfa124f3ee" />
 
-<img width="495" height="637" alt="Снимок экрана 2025-10-17 в 19 31 20" src="https://github.com/user-attachments/assets/b3f58ebe-2a9b-4fb2-be62-0a58f7360978" />
+<img width="406" height="775" alt="Снимок экрана 2025-10-18 в 18 27 14" src="https://github.com/user-attachments/assets/fa0134cc-230a-4585-b483-dd3267ed28e5" />
+
 
 </p>
 
