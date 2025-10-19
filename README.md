@@ -8,7 +8,7 @@ Developed in 3 languages: RU, UA, EN.
 
 ## 🔗 Live Demo
 Check out the live site here:  
-(https://kovalyovamaria.github.io/Moon-River-/)
+(https://kovalyovamaria.github.io/Moon_River_/)
 
 ---
 
