@@ -55,4 +55,4 @@ Check out the live site here:
 ## 💻 How to Run Locally
 1. Clone the repository:
 ```bash
-git clone https://github.com/KovalyovaMaria/Moon-River-.git
+git clone https://github.com/KovalyovaMaria/Moon_River_.git
